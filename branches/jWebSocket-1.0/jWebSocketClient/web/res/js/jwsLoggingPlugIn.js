@@ -1,7 +1,7 @@
 //	---------------------------------------------------------------------------
 //	jWebSocket Logging Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,6 +16,8 @@
 //	See the License for the specific language governing permissions and
 //	limitations under the License.
 //	---------------------------------------------------------------------------
+
+jws = jws || {};
 
 //:package:*:jws
 //:class:*:jws.LoggingPlugIn
@@ -121,7 +123,12 @@ jws.LoggingPlugIn = {
 				info: aInfo,
 				message: aMessage
 			};
-			this.sendToken(lToken, aOptions);
+			try {
+				this.sendToken(lToken, aOptions);
+			} catch (lEx) {
+				jws.console.error("jWebSocket Logging plug-in client exception: "
+						+ lEx);
+			}
 		}
 		return lRes;
 	},

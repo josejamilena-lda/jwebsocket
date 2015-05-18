@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<!--
 <!DOCTYPE log4j:configuration PUBLIC 
 	"-//APACHE//DTD LOG4J 1.2//EN" "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+-->	
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
 
 	<!-- for details of this file format and content please refer to 
@@ -106,10 +109,6 @@
 		</layout>
 	</appender>
 	
-	<appender name="jWebSocketAppender" class="org.jwebsocket.logging.JWSLog4JAppender">
-		<level value="debug"/>
-	</appender>
-
 	<!-- special treatment for all logging activities of the spring-framework -->
 	<logger name="org.springframework" additivity="false">
 		<level value="WARN"/>
@@ -122,7 +121,7 @@
 		<level value="DEBUG"/>
 		<!--  select one of the above declared appenders -->
 		<appender-ref ref="developmentLog"/>
-		<appender-ref ref="jWebSocketAppender"/>
+		<!-- <appender-ref ref="jWebSocketAppender"/> -->
 	</logger>
 
 	<!-- special treatment for all logging activities of the jWebSocket load balancer -->
@@ -174,7 +173,7 @@
 		<!-- during the development -->
 		<appender-ref ref="developmentLog"/>
 		<appender-ref ref="jmsLog"/>
-		<appender-ref ref="jWebSocketAppender"/>
+		<!-- <appender-ref ref="jWebSocketAppender"/> -->
 
 		<!-- during debug cycles  -->
 		<!-- <appender-ref ref="debugLog"/> -->

@@ -1,7 +1,7 @@
 //	---------------------------------------------------------------------------
-//	jWebSocket - Log4JLogger (Community Edition, CE)
+//	jWebSocket - ClientLogger (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,9 +29,9 @@ import org.apache.log4j.Logger;
  *
  * @author Alexander Schulze
  */
-public class Log4JLogger extends BaseLogger implements ILogger {
+public class ClientLogger extends BaseLogger implements ILogger {
 
-	private static final Logger mLog = Logger.getLogger(Log4JLogger.class);
+	private static final Logger mLog = Logger.getLogger(ClientLogger.class);
 
 	/**
 	 *

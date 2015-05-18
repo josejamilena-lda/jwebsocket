@@ -37,6 +37,7 @@
 		<property name="smtpUser" value="#your smtp server's username#"/>
 		<property name="smtpPassword" value="#your smtp server's password#"/>
 		<property name="smtpPop3Before" value="false"/>
+
 		<property name="pop3Host" value="#your pop3 host (ip or hostname)#"/>
 		<property name="pop3Port" value="110"/>
 		<property name="pop3User" value="#your pop3 server's username#"/>
