@@ -4768,7 +4768,7 @@ jws.oop.declareClass( "jws", "jWebSocketXMLClient", jws.jWebSocketTokenClient, {
 //	jWebSocket XHRWebSocket class (Community Edition, CE)
 //	---------------------------------------------------------------------------
 //	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
-//  Alexander Schulze, Germany (NRW)
+//	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
 //	you may not use this file except in compliance with the License.
@@ -5561,7 +5561,7 @@ onmessage = function( aEvent ) {
 //	jWebSocket API PlugIn (Community Edition, CE)
 //	---------------------------------------------------------------------------
 //	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
-//  Alexander Schulze, Germany (NRW)
+//	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
 //	you may not use this file except in compliance with the License.
@@ -6858,7 +6858,7 @@ jws.oop.addPlugIn(jws.jWebSocketTokenClient, jws.ChannelPlugIn);
 //	jWebSocket Chat Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
 //	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
-//  Alexander Schulze, Germany (NRW)
+//	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
 //	you may not use this file except in compliance with the License.
@@ -7804,7 +7804,7 @@ jws.oop.declareClass('jws', 'ValidatorFilter', jws.EventsBaseFilter, {
 //	jWebSocket External Processes Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
 //	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
-//  Alexander Schulze, Germany (NRW)
+//	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
 //	you may not use this file except in compliance with the License.
@@ -10097,7 +10097,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.JDBCPlugIn );
 //	jWebSocket JMS Plug-in  (Community Edition, CE)
 //	---------------------------------------------------------------------------
 //	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
-//  Alexander Schulze, Germany (NRW)
+//	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
 //	you may not use this file except in compliance with the License.
@@ -11086,7 +11086,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.RPCClientPlugIn );
 //	jWebSocket RTC Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
 //	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
-//  Alexander Schulze, Germany (NRW)
+//	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
 //	you may not use this file except in compliance with the License.
@@ -11240,7 +11240,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.SamplesPlugIn );
 //	jWebSocket Scripting Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
 //	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
-//  Alexander Schulze, Germany (NRW)
+//	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the 'License');
 //	you may not use this file except in compliance with the License.
