@@ -2,7 +2,7 @@
 //	---------------------------------------------------------------------------
 //	jWebSocket JavaScript/Browser Client (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,9 +37,9 @@ if( window.MozWebSocket ) {
 //:d:en:including various utility methods.
 var jws = {
 
-	//:const:*:VERSION:String:1.0.0 RC3 (build 50223)
+	//:const:*:VERSION:String:1.0.0 (build 50512)
 	//:d:en:Version of the jWebSocket JavaScript Client
-	VERSION: "1.0.0 RC3 (build 50223)",
+	VERSION: "1.0.0 (build 50512)",
 
 	//:const:*:NS_BASE:String:org.jwebsocket
 	//:d:en:Base namespace

@@ -1,7 +1,7 @@
 //	---------------------------------------------------------------------------
 //	jWebSocket SSO client PlugIn (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,6 +21,8 @@
 // http://tools.ietf.org/html/rfc6749 - The OAuth 2.0 Authorization Framework
 // http://tools.ietf.org/html/rfc6750 - The OAuth 2.0 Authorization Framework: Bearer Token Usage
 // http://oauth.net/2/ - OAuth 2.0
+
+jws = jws || {};
 
 jws.SSOPlugIn = {
 	// namespace for SSO plugin
@@ -58,6 +60,13 @@ jws.SSOPlugIn = {
 //				}
 //			}
 		}
+	},
+	// IE <= 9 does not allow to request data of the XHR object before
+	// it get readystate == 4, so here we need to ask for that to remain
+	// compatible to older IE versions.
+	mXHRReadyStateAvailable: function ( ) {
+		return("Internet Explorer" !== jws.getBrowserName()
+				|| jws.getBrowserVersion() >= 10);
 	},
 	//
 	mGetXHR: function ( ) {
@@ -373,13 +382,15 @@ jws.SSOPlugIn = {
 
 		var lResponseText = "";
 		lXHR.onreadystatechange = function () {
-			jws.console.debug(
-					lXHR.readyState
-					+ ", " + lXHR.status
-					+ ", " + lXHR.responseText
-					);
-			if (lXHR.readyState === 3) {
-				lResponseText = lXHR.responseText;
+			if (jws.SSOPlugIn.mXHRReadyStateAvailable()) {
+				jws.console.debug(
+						lXHR.readyState
+						+ ", " + lXHR.status
+						+ ", " + lXHR.responseText
+						);
+				if (lXHR.readyState === 3) {
+					lResponseText = lXHR.responseText;
+				}
 			}
 			if (lXHR.readyState >= 4) {
 				clearTimeout(hTimeout);
@@ -510,13 +521,15 @@ jws.SSOPlugIn = {
 
 		var lResponseText = "";
 		lXHR.onreadystatechange = function () {
-			jws.console.debug(
-					lXHR.readyState
-					+ ", " + lXHR.status
-					+ ", " + lXHR.responseText
-					);
-			if (lXHR.readyState === 3) {
-				lResponseText = lXHR.responseText;
+			if (jws.SSOPlugIn.mXHRReadyStateAvailable()) {
+				jws.console.debug(
+						lXHR.readyState
+						+ ", " + lXHR.status
+						+ ", " + lXHR.responseText
+						);
+				if (lXHR.readyState === 3) {
+					lResponseText = lXHR.responseText;
+				}
 			}
 			if (lXHR.readyState >= 4) {
 				clearTimeout(hTimeout);
@@ -639,13 +652,15 @@ jws.SSOPlugIn = {
 
 		var lResponseText = "";
 		lXHR.onreadystatechange = function () {
-			jws.console.debug(
-					lXHR.readyState
-					+ ", " + lXHR.status
-					+ ", " + lXHR.responseText
-					);
-			if (lXHR.readyState === 3) {
-				lResponseText = lXHR.responseText;
+			if (jws.SSOPlugIn.mXHRReadyStateAvailable()) {
+				jws.console.debug(
+						lXHR.readyState
+						+ ", " + lXHR.status
+						+ ", " + lXHR.responseText
+						);
+				if (lXHR.readyState === 3) {
+					lResponseText = lXHR.responseText;
+				}
 			}
 			if (lXHR.readyState >= 4) {
 				clearTimeout(hTimeout);
@@ -772,13 +787,15 @@ jws.SSOPlugIn = {
 
 		var lResponseText = "";
 		lXHR.onreadystatechange = function () {
-			jws.console.debug(
-					lXHR.readyState
-					+ ", " + lXHR.status
-					+ ", " + lXHR.responseText
-					);
-			if (lXHR.readyState === 3) {
-				lResponseText = lXHR.responseText;
+			if (jws.SSOPlugIn.mXHRReadyStateAvailable()) {
+				jws.console.debug(
+						lXHR.readyState
+						+ ", " + lXHR.status
+						+ ", " + lXHR.responseText
+						);
+				if (lXHR.readyState === 3) {
+					lResponseText = lXHR.responseText;
+				}
 			}
 			if (lXHR.readyState >= 4) {
 				clearTimeout(hTimeout);
@@ -830,7 +847,7 @@ jws.SSOPlugIn = {
 								if (aOptions.OnFailure) {
 									var lMsg = (lJSON
 											? lJSON.error_description
-										: "Invalid JSON returned from OAuth server (parse error), HTTP status: " + lXHR.status + ": " + lResponseText
+											: "Invalid JSON returned from OAuth server (parse error), HTTP status: " + lXHR.status + ": " + lResponseText
 											);
 									var lToken = {
 										code: -1,
@@ -926,13 +943,15 @@ jws.SSOPlugIn = {
 
 		var lResponseText = "";
 		lXHR.onreadystatechange = function () {
-			jws.console.debug(
-					lXHR.readyState
-					+ ", " + lXHR.status
-					+ ", " + lXHR.responseText
-					);
-			if (lXHR.readyState === 3) {
-				lResponseText = lXHR.responseText;
+			if (jws.SSOPlugIn.mXHRReadyStateAvailable()) {
+				jws.console.debug(
+						lXHR.readyState
+						+ ", " + lXHR.status
+						+ ", " + lXHR.responseText
+						);
+				if (lXHR.readyState === 3) {
+					lResponseText = lXHR.responseText;
+				}
 			}
 			if (lXHR.readyState >= 4) {
 				clearTimeout(hTimeout);
@@ -1083,13 +1102,15 @@ jws.SSOPlugIn = {
 
 		var lResponseText = "";
 		lXHR.onreadystatechange = function () {
-			jws.console.debug(
-					lXHR.readyState
-					+ ", " + lXHR.status
-					+ ", " + lXHR.responseText
-					);
-			if (lXHR.readyState === 3) {
-				lResponseText = lXHR.responseText;
+			if (jws.SSOPlugIn.mXHRReadyStateAvailable()) {
+				jws.console.debug(
+						lXHR.readyState
+						+ ", " + lXHR.status
+						+ ", " + lXHR.responseText
+						);
+				if (lXHR.readyState === 3) {
+					lResponseText = lXHR.responseText;
+				}
 			}
 			if (lXHR.readyState >= 4) {
 				clearTimeout(hTimeout);
@@ -1223,13 +1244,15 @@ jws.SSOPlugIn = {
 
 		var lResponseText = "";
 		lXHR.onreadystatechange = function () {
-			jws.console.debug(
-					lXHR.readyState
-					+ ", " + lXHR.status
-					+ ", " + lXHR.responseText
-					);
-			if (lXHR.readyState === 3) {
-				lResponseText = lXHR.responseText;
+			if (jws.SSOPlugIn.mXHRReadyStateAvailable()) {
+				jws.console.debug(
+						lXHR.readyState
+						+ ", " + lXHR.status
+						+ ", " + lXHR.responseText
+						);
+				if (lXHR.readyState === 3) {
+					lResponseText = lXHR.responseText;
+				}
 			}
 			if (lXHR.readyState >= 4) {
 				clearTimeout(hTimeout);

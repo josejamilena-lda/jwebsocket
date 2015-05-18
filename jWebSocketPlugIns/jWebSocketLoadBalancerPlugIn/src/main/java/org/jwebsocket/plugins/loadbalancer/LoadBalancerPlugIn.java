@@ -54,7 +54,7 @@ public class LoadBalancerPlugIn extends ActionPlugIn {
 	 *
 	 */
 	public static final String NS_LOADBALANCER = JWebSocketServerConstants.NS_BASE + ".plugins.loadbalancer";
-	private final static String VERSION = "1.0.0";
+	private final static String VERSION = "1.1.0";
 	private final static String VENDOR = JWebSocketCommonConstants.VENDOR_CE;
 	private final static String LABEL = "jWebSocket LoadBalancerPlugIn";
 	private final static String COPYRIGHT = JWebSocketCommonConstants.COPYRIGHT_CE;

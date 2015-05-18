@@ -2,7 +2,7 @@
 //	---------------------------------------------------------------------------
 //	jWebSocket JavaScript/Browser Client (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -4767,7 +4767,7 @@ jws.oop.declareClass( "jws", "jWebSocketXMLClient", jws.jWebSocketTokenClient, {
 //	---------------------------------------------------------------------------
 //	jWebSocket XHRWebSocket class (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //  Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -5530,7 +5530,7 @@ if (typeof module !== "undefined") {
 //	(supports multithreading and background processes on browser clients,
 //	 given if they already support the HTML5 WebWorker standard)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org), Germany (NRW), Herzogenrath
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org), Germany (NRW), Herzogenrath
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
 //	you may not use this file except in compliance with the License.
@@ -5560,7 +5560,7 @@ onmessage = function( aEvent ) {
 //	---------------------------------------------------------------------------
 //	jWebSocket API PlugIn (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //  Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -5740,7 +5740,7 @@ jws.oop.addPlugIn(jws.jWebSocketTokenClient, jws.APIPlugIn);
 //	---------------------------------------------------------------------------
 //	jWebSocket Canvas Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //	
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -6060,7 +6060,7 @@ if( jws.isIE ) {
 }//	---------------------------------------------------------------------------
 //	jWebSocket Canvas Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //	
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -6380,7 +6380,7 @@ if( jws.isIE ) {
 }//	---------------------------------------------------------------------------
 //	jWebSocket Channel Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -6857,7 +6857,7 @@ jws.oop.addPlugIn(jws.jWebSocketTokenClient, jws.ChannelPlugIn);
 //	---------------------------------------------------------------------------
 //	jWebSocket Chat Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //  Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -6945,7 +6945,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.ChatPlugIn );
 //	---------------------------------------------------------------------------
 //	jWebSocket Client Gaming Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -7147,7 +7147,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.ClientGamingPlugIn );
 //  ---------------------------------------------------------------------------
 //  jWebSocket - Events Plug-in  (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //  Author: Rolando Santamaria Maso
 //
@@ -7803,7 +7803,7 @@ jws.oop.declareClass('jws', 'ValidatorFilter', jws.EventsBaseFilter, {
 //	---------------------------------------------------------------------------
 //	jWebSocket External Processes Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //  Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -7889,7 +7889,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.ExtProcessPlugIn );
 //	---------------------------------------------------------------------------
 //	jWebSocket Filesystem plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -8469,7 +8469,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.FileSystemPlugIn );
 //  ---------------------------------------------------------------------------
 //  jWebSocket - Dependency Injection Container (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -9239,7 +9239,7 @@ jws.sc = new jws.ioc.ServiceContainerBuilder({
 //	---------------------------------------------------------------------------
 //	jWebSocket ItemStorage Client Plug-In (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //	
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -9782,7 +9782,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.ItemStoragePlugIn );
 //	---------------------------------------------------------------------------
 //	jWebSocket JDBC Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -10096,7 +10096,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.JDBCPlugIn );
 //	---------------------------------------------------------------------------
 //	jWebSocket JMS Plug-in  (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //  Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -10396,7 +10396,7 @@ jws.oop.addPlugIn(jws.jWebSocketTokenClient, jws.JMSPlugIn);
 //	---------------------------------------------------------------------------
 //	jWebSocket Logging Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -10548,7 +10548,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.LoggingPlugIn );
 //	---------------------------------------------------------------------------
 //	jWebSocket Mail Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -10770,7 +10770,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.MailPlugIn );
 //	---------------------------------------------------------------------------
 //	jWebSocket Reporting Client Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -10880,7 +10880,7 @@ jws.ReportingPlugIn = {
 jws.oop.addPlugIn(jws.jWebSocketTokenClient, jws.ReportingPlugIn);//	---------------------------------------------------------------------------
 //	jWebSocket Mail RPC/RRPC Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -11085,7 +11085,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.RPCClientPlugIn );
 //	---------------------------------------------------------------------------
 //	jWebSocket RTC Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //  Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -11169,7 +11169,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.RTCPlugIn );
 //	---------------------------------------------------------------------------
 //	jWebSocket Sample Client PlugIn (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -11239,7 +11239,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.SamplesPlugIn );
 //	---------------------------------------------------------------------------
 //	jWebSocket Scripting Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //  Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the 'License');
@@ -11558,7 +11558,7 @@ jws.oop.addPlugIn(jws.jWebSocketTokenClient, jws.ScriptingPlugIn);
 //	---------------------------------------------------------------------------
 //	jWebSocket Shared Objects Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -11736,7 +11736,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.SharedObjectsPlugIn );
 //	---------------------------------------------------------------------------
 //	jWebSocket Streaming Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -11823,7 +11823,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.StreamingPlugIn );
 //	---------------------------------------------------------------------------
 //	jWebSocket Test Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -11997,7 +11997,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.StopWatchPlugIn );
 //	---------------------------------------------------------------------------
 //	jWebSocket Twitter Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -12236,7 +12236,7 @@ jws.oop.addPlugIn( jws.jWebSocketTokenClient, jws.TwitterPlugIn );
 //	---------------------------------------------------------------------------
 //	jWebSocket XMPP Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org), Germany (NRW), Herzogenrath
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org), Germany (NRW), Herzogenrath
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
 //	you may not use this file except in compliance with the License.

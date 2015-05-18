@@ -1,7 +1,7 @@
 //	---------------------------------------------------------------------------
 //	jWebSocket - Logging Plug-in (Community Edition, CE)
 //	---------------------------------------------------------------------------
-//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
+//	Copyright 2010-2015 Innotrade GmbH (jWebSocket.org)
 //	Alexander Schulze, Germany (NRW)
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
@@ -217,6 +217,20 @@ public class LoggingPlugIn extends TokenPlugIn {
 		InetAddress lRemoteHost = null;
 		// instantiate response token
 		Token lResponse = lServer.createResponse(aToken);
+
+		String lMessage = aToken.getString("message");
+		String lLevel = aToken.getString("level");
+		if (null == lMessage || lMessage.isEmpty()) {
+			lResponse.setInteger("code", -1);
+			lResponse.setString("msg", "No or empty message passed.");
+			lServer.sendToken(aConnector, lResponse);
+		}
+		if (null == lLevel || lLevel.isEmpty()) {
+			lResponse.setInteger("code", -1);
+			lResponse.setString("msg", "No or empty level passed.");
+			lServer.sendToken(aConnector, lResponse);
+		}
+
 		Map lInfoMap = aToken.getMap("info");
 		if (null == lInfoMap) {
 			lInfoMap = new FastMap<Object, Object>();
@@ -249,8 +263,6 @@ public class LoggingPlugIn extends TokenPlugIn {
 			lInfoMap.put("ip", lRemoteHost.getHostAddress());
 			lInfoMap.put("hostname", lRemoteHost.getCanonicalHostName());
 		}
-		String lMessage = aToken.getString("message");
-		String lLevel = aToken.getString("level");
 
 		try {
 			LogLevel lLogLevel = LogLevel.stringToLevel(lLevel);
