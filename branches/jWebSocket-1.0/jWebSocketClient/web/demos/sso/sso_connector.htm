@@ -7,7 +7,7 @@
 		//	jWebSocket SSO Connector (Community Edition, CE)
 		//	****************************************************************************
 		//	Copyright 2010-2014 Innotrade GmbH (jWebSocket.org)
-		//  Alexander Schulze, Germany (NRW)
+		//	Alexander Schulze, Germany (NRW)
 		//
 		//	Licensed under the Apache License, Version 2.0 (the "License");
 		//	you may not use this file except in compliance with the License.
@@ -27,11 +27,11 @@
 		<script type="text/javascript" id="jwsSSOConnector">
 			var lHash = document.location.hash.substring(1);
 			var lHost = document.location.hostname;
-			// for debug purposes
+			// for debug purposes only:
 			// document.write( "Session Cookie Wrapper on " + lHost + " for " + lHash + "<br>");
 			// document.write( "Cookie: " + document.cookie );
-			console.log( "Session Cookie Wrapper on " + lHost + " for " + lHash);
-			console.log( "Cookie: " + document.cookie );
+			// console.log( "Session Cookie Wrapper on " + lHost + " for " + lHash);
+			// console.log( "Cookie: " + document.cookie );
 			window.parent.postMessage(
 					'{"ns": "org.jwebsocket.docmsg",'
 					+ '"type": "sessioncookie",'
