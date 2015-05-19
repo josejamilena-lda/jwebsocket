@@ -3,7 +3,7 @@
 	Document   : jWebSocketScripting.xml
 	Created on : May 20 2015, 00:25 AM
 	Author     : Rolando Santamaria Maso
-	Description: Configuration file for a minimum jWebSocket Scripting plug-in
+	Description: Configuration file for a minimum jWebSocket server + Scripting plug-in
 	runtime environment. 
 -->
 <jWebSocket>
@@ -274,7 +274,7 @@
 			</server-assignments>
 		</plugin>
 		
-        <!-- filesystem plug-in to access server files via WebSockets -->
+        <!-- filesystem plug-in to access server files -->
 		<plugin>
 			<name>org.jwebsocket.plugins.filesystem.FileSystemPlugIn</name>
 			<id>jws.filesystem</id>
@@ -312,8 +312,7 @@
 			</server-assignments>
 		</plugin>
         
-		<!-- Scripting plug-in, e.g. to call JavaScript on the server side -->
-		<!-- will be released in jWebSocket 1.1 -->
+		<!-- Scripting plug-in for server-side JavaScript development -->
 		<plugin>
 			<name>org.jwebsocket.plugins.scripting.ScriptingPlugIn</name>
 			<id>jWebSocketScriptingPlugIn</id>
