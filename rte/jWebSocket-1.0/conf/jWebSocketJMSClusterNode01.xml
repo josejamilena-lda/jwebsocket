@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Document   : jWebSocketJMSClusterNode01.xml
+	Created on : May 20 2015, 00:25 AM
+	Author     : Rolando Santamaria Maso
+	Description: Configuration file for a minimum jWebSocket server cluster + Scripting plug-in
+	runtime environment. Node: 01
+-->
 <jWebSocket>
 	<installation>prod</installation>
 	<protocol>json</protocol>
 	<node_id>01</node_id>
 	
 	<libraries>
-		<library>
-			<id>MySQLJDBCDriver</id>
-			<url>${JWEBSOCKET_HOME}libs/mysql-connector-java-5.1.16.jar</url>
-			<description>MySQL JDBC driver to access MySQL databases from jWebSocket and its plug-ins</description>
-		</library>
-		<library>
-			<id>DerbyDriver</id>
-			<url>${JWEBSOCKET_HOME}libs/derby-10.10.1.1.jar</url>
-			<description>Derby JDBC driver to access Derby databases from jWebSocket and its plug-ins</description>
-		</library>
 	</libraries>
 
 	<!-- jWebSocket logging configuration -->
@@ -79,7 +76,7 @@
 			<id>send</id>
 			<description>Send message to a single target client.</description>
 		</right>
-		<!-- Cluster Admin plug-in rights -->
+		<!-- ClusterAdmin plug-in rights -->
 		<right>
 			<ns>org.jwebsocket.plugins.clusteradmin</ns>
 			<id>pausenode</id>
@@ -96,72 +93,6 @@
 			<description>Allows to get information from the jWebSocket cluster.</description>
 		</right>
 
-		<!-- Channel rights -->
-		<right>
-			<ns>org.jwebsocket.plugins.channels</ns>
-			<id>start</id>
-			<description>Allows to start a channel</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.channels</ns>
-			<id>stop</id>
-			<description>Allows to stop a channel</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.channels</ns>
-			<id>suspend</id>
-			<description>Allows to suspend a channel</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.channels</ns>
-			<id>resume</id>
-			<description>Allows to resume a channel</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.channels</ns>
-			<id>subscribe</id>
-			<description>Allows to subscribe to and unsubscribe from a channel</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.channels</ns>
-			<id>publish</id>
-			<description>Allows to publish to a channel</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.channels</ns>
-			<id>getChannels</id>
-			<description>Allows to retrieve the list of available channels</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.channels</ns>
-			<id>getSubscribers</id>
-			<description>Allows to retrieve the list of scubscribers of a certain channel</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.channels</ns>
-			<id>getSubscriptions</id>
-			<description>Allows to retrieve the list of channels the current client subscribed to</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.channels</ns>
-			<id>createChannel</id>
-			<description>Allows to create a new channel</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.channels</ns>
-			<id>removeChannel</id>
-			<description>Allows to remove an existing channel</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.channels</ns>
-			<id>authorize</id>
-			<description>Allows to authorize on an existing channel</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.channels</ns>
-			<id>manageSystemChannels</id>
-			<description>Allows to manage (create and remove) system channels from clients</description>
-		</right>
 		<!-- Scripting rights -->
 		<right>
 			<ns>org.jwebsocket.plugins.scripting</ns>
@@ -173,87 +104,8 @@
 			<id>deploy.*</id>
 			<description>Allows to deploy script apps in runtime</description>
 		</right>
-		<!-- configuration of jms plug-in specific rights -->
-		<right>
-			<ns>org.jwebsocket.plugins.jms</ns>
-			<id>sendAndListen.queue.testQueue</id>
-			<description>send and listen to queue with name: testQueue</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.jms</ns>
-			<id>listen.topic.testTopic</id>
-			<description>listen to topic with name: testTopic</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.jms</ns>
-			<id>send.topic.testTopic</id>
-			<description>send messages to topic with name: testTopic
-			</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.jms</ns>
-			<id>sendAndListen.topic.stockTopic</id>
-			<description>send and listen to topic with name: stockTopic</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.jms</ns>
-			<id>createConnection</id>
-			<description>createConnection</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.jms</ns>
-			<id>createSession</id>
-			<description>createSession</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.jms</ns>
-			<id>createQueue</id>
-			<description>createQueue</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.jms</ns>
-			<id>createConsumer</id>
-			<description>createConsumer</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.jms</ns>
-			<id>rw.test.queue</id>
-			<description>read/write</description>
-		</right>
-
-		<!-- ItemStorage rights -->
-		<right>
-			<ns>org.jwebsocket.plugins.itemstorage</ns>
-			<id>write_collection</id>
-			<description>Allows to admin item collections (create, remove, clear, changeConfig)</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.itemstorage</ns>
-			<id>read_collection</id>
-			<description>Allows to access item collections (list, getInfo, subscribe, authorize)</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.itemstorage</ns>
-			<id>write_item</id>
-			<description>Allows to admin collection items (save, remove)</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.itemstorage</ns>
-			<id>read_item</id>
-			<description>Allows to access collection items (find, list)</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.itemstorage</ns>
-			<id>write_definition</id>
-			<description>Allows to admin item definitions (register, remove)</description>
-		</right>
-		<right>
-			<ns>org.jwebsocket.plugins.itemstorage</ns>
-			<id>read_definition</id>
-			<description>Allows to access item definitions (list)</description>
-		</right>
-
-		<!-- configuration of filesystem plug-in specific rights -->
+		
+		<!-- Filesystem plug-in specific rights -->
 		<right>
 			<ns>org.jwebsocket.plugins.filesystem</ns>
 			<id>load</id>
@@ -302,52 +154,20 @@
 			<id>Administrator</id>
 			<description>Administrators</description>
 			<rights>
-				<!-- Cluster admin rights -->
+				<!-- ClusterAdmin plug-in rights -->
 				<right>org.jwebsocket.plugins.clusteradmin.getinfo</right>
 				<right>org.jwebsocket.plugins.clusteradmin.pausenode</right>
 				<right>org.jwebsocket.plugins.clusteradmin.shutdownnode</right>
 				
-				<!-- list of rights for "Administrator" role (ns + . + id) -->
+				<!-- System plug-in rights -->
 				<right>org.jwebsocket.plugins.system.broadcast</right>
 				<right>org.jwebsocket.plugins.system.send</right>
 				
+				<!-- Scripting plug-in rights -->
 				<right>org.jwebsocket.plugins.scripting.reloadApp.*</right>
 				<right>org.jwebsocket.plugins.scripting.deploy.*</right>
 
-				<!-- Channel rights -->
-				<right>org.jwebsocket.plugins.channels.subscribe</right>
-				<right>org.jwebsocket.plugins.channels.authorize</right>
-				<right>org.jwebsocket.plugins.channels.publish</right>
-				<right>org.jwebsocket.plugins.channels.getChannels</right>
-				<right>org.jwebsocket.plugins.channels.getSubscribers</right>
-				<right>org.jwebsocket.plugins.channels.getSubscriptions</right>
-				<right>org.jwebsocket.plugins.channels.getChannels</right>
-				<right>org.jwebsocket.plugins.channels.createChannel</right>
-				<right>org.jwebsocket.plugins.channels.removeChannel</right>
-				<right>org.jwebsocket.plugins.channels.start</right>
-				<right>org.jwebsocket.plugins.channels.stop</right>
-
-				<!-- JMS rights -->
-				<right>org.jwebsocket.plugins.jms.sendAndListen.queue.testQueue</right>
-				<right>org.jwebsocket.plugins.jms.listen.topic.testTopic</right>
-				<right>org.jwebsocket.plugins.jms.send.topic.testTopic</right>
-				<right>org.jwebsocket.plugins.jms.sendAndListen.topic.stockTopic</right>
-				
-				<right>org.jwebsocket.plugins.jms.createSession</right>
-				<right>org.jwebsocket.plugins.jms.createConnection</right>
-				<right>org.jwebsocket.plugins.jms.createQueue</right>
-				<right>org.jwebsocket.plugins.jms.createConsumer</right>
-				<right>org.jwebsocket.plugins.jms.rw.test.queue</right>
-
-				<!-- itemstorage rights -->
-				<right>org.jwebsocket.plugins.itemstorage.write_collection</right>
-				<right>org.jwebsocket.plugins.itemstorage.read_collection</right>
-				<right>org.jwebsocket.plugins.itemstorage.write_item</right>
-				<right>org.jwebsocket.plugins.itemstorage.read_item</right>
-				<right>org.jwebsocket.plugins.itemstorage.write_definition</right>
-				<right>org.jwebsocket.plugins.itemstorage.read_definition</right>
-
-				<!-- filesystem rights -->
+				<!-- Filesystem rights -->
 				<right>org.jwebsocket.plugins.filesystem.load</right>
 				<right>org.jwebsocket.plugins.filesystem.save</right>
 				<right>org.jwebsocket.plugins.filesystem.append</right>
@@ -367,43 +187,9 @@
 				<right>org.jwebsocket.plugins.system.send</right>
 			</rights>
 		</role>
-		<role>
-			<id>Guest</id>
-			<description>Anonymous users (not registered)</description>
-			<rights>
-				<!-- list of rights for "Guest" role (ns + . + id) -->
-				<right>org.jwebsocket.plugins.system.broadcast</right>
-				<right>org.jwebsocket.plugins.system.send</right>
-
-				<right>org.jwebsocket.plugins.scripting.reloadApp.*</right>
-				<right>org.jwebsocket.plugins.scripting.deploy.*</right>
-
-				<!-- filesystem rights -->
-				<right>org.jwebsocket.plugins.filesystem.load</right>
-				<right>org.jwebsocket.plugins.filesystem.save</right>
-				<right>org.jwebsocket.plugins.filesystem.append</right>
-				<right>org.jwebsocket.plugins.filesystem.delete</right>
-				<right>org.jwebsocket.plugins.filesystem.exists</right>
-				<right>org.jwebsocket.plugins.filesystem.send</right>
-				<right>org.jwebsocket.plugins.filesystem.getFilelist</right>
-				<right>org.jwebsocket.plugins.filesystem.observe</right>
-			</rights>
-		</role>
 	</roles>
 
 	<users>
-		<user>
-			<uuid>000-000-001-2011-07-14-11-32-40-223</uuid>
-			<loginname>guest</loginname>
-			<firstname>jWebSocket Guest User</firstname>
-			<lastname>(Guest Role)</lastname>
-			<password>guest</password>
-			<description>jWebSocket Guest User</description>
-			<status>1</status>
-			<roles>
-				<role>Guest</role>
-			</roles>
-		</user>
 		<user>
 			<uuid>000-000-002-2011-07-14-11-33-20-493</uuid>
 			<loginname>user</loginname>
@@ -413,7 +199,6 @@
 			<description>jWebSocket Standard User</description>
 			<status>1</status>
 			<roles>
-				<role>Guest</role>
 				<role>User</role>
 			</roles>
 		</user>
@@ -426,21 +211,6 @@
 			<description>jWebSocket Root User</description>
 			<status>1</status>
 			<roles>
-				<role>Guest</role>
-				<role>User</role>
-				<role>Administrator</role>
-			</roles>
-		</user>
-		<user>
-			<uuid>000-000-004-2011-07-14-11-35-54-871</uuid>
-			<loginname>anonymous</loginname>
-			<firstname>jWebSocket Anonymous User</firstname>
-			<lastname>(Roles to be specified!)</lastname>
-			<password></password>
-			<description>jWebSocket Anonymous User (Specify if anonymous logins should be supported at all in System Plug-in)</description>
-			<status>1</status>
-			<roles>
-				<role>Guest</role>
 				<role>User</role>
 				<role>Administrator</role>
 			</roles>
@@ -470,19 +240,17 @@
 			</server-assignments>
 		</plugin>
 		
-        <!-- filesystem plug-in to access server files via WebSockets -->
+       <!-- filesystem plug-in to access server files via WebSockets -->
 		<plugin>
-			<name>org.jwebsocket.enterprise.plugins.filesystem.FileSystemPlugIn</name>
+			<name>org.jwebsocket.plugins.filesystem.FileSystemPlugIn</name>
 			<id>jws.filesystem</id>
 			<ns>org.jwebsocket.plugins.filesystem</ns>
-			<!-- to use the enterprise edition of jWebSocketFileSystemPlugIn add the following line -->
 			<jars>
 				<jar>${JWEBSOCKET_HOME}libs/jWebSocketFileSystemPlugIn-1.0.jar</jar>
-				<jar>${JWEBSOCKET_EE_HOME}libs/jWebSocketFileSystemPlugInEE-1.0.jar</jar>
 			</jars>
 			<!-- plug-in specific settings -->
 			<settings>
-				<setting key="spring_config">${JWEBSOCKET_EE_HOME}conf/FileSystemPlugInEE/filesystem.xml</setting>
+				<setting key="spring_config">${JWEBSOCKET_HOME}conf/FileSystemPlugIn/filesystem.xml</setting>
 				<!-- Authorization method 
 				     - spring: Uses the user Spring authentication to check for granted authorities 
 					 - static: Uses the user static (jWebSocket.xml users definition) authentication
@@ -509,9 +277,8 @@
 				<server-assignment>ts0</server-assignment>
 			</server-assignments>
 		</plugin>
-        
-		<!-- Scripting plug-in, e.g. to call JavaScript on the server side -->
-		<!-- will be released in jWebSocket 1.1 -->
+		 
+		<!-- Scripting plug-in for server-side JavaScript development -->
 		<plugin>
 			<name>org.jwebsocket.plugins.scripting.ScriptingPlugIn</name>
 			<id>jWebSocketScriptingPlugIn</id>
@@ -523,6 +290,8 @@
 				<server-assignment>ts0</server-assignment>
 			</server-assignments>
 		</plugin>
+		
+		<!-- ClusterAdmin plug-in for JMS cluster administration -->
 		<plugin>
 			<name>org.jwebsocket.enterprise.cluster.jms.JMSClusterAdminPlugIn</name>
 			<id>jWebSocketJMSClusterAdminPlugInEE</id>
