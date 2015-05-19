@@ -74,6 +74,7 @@ jws.tests.FileSystemEE = {
 
 			jws.Tests.getAdminTestConn().fileSaveByChunks( lFilename, lData, lIsChunk, {
 				encode: true,
+				encoding: 'zipBase64',
 				scope: aScope,
 				OnResponse: function( aToken ) {
 					lResponse = aToken;
