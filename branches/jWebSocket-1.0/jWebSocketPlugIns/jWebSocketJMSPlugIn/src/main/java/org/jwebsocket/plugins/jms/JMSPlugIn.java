@@ -201,7 +201,7 @@ public class JMSPlugIn extends TokenPlugIn {
 			// will fail and cause an exception, such that we cannot
 			// connect to the queue or topic.
 			mConnection.start();
-			
+
 			// publishing global information that is required by other components
 			String lIpAddress;
 			if (JWebSocketServerConstants.DEFAULT_HOSTNAME.equals(mSettings.getHostname())) {
@@ -360,7 +360,7 @@ public class JMSPlugIn extends TokenPlugIn {
 	}
 
 	@Override
-	public void engineStopped(WebSocketEngine aEngine) {
+	public void systemStopping() throws Exception {
 		if (null != mJmsManager) {
 			mJmsManager.shutDownListeners();
 		}
@@ -394,7 +394,10 @@ public class JMSPlugIn extends TokenPlugIn {
 		}
 
 		// this one processes potential exceptions itself
-		mJMSLogger.close();
+		try {
+			mJMSLogger.close();
+		} catch (Exception lEx) {
+		}
 
 		if (null != mConnection) {
 			try {
