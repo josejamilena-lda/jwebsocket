@@ -36,8 +36,8 @@ import org.jwebsocket.logging.Logging;
 import org.jwebsocket.plugins.TokenPlugIn;
 
 /**
- * This plug-in processes the policy-file-request from the browser side flash
- * plug-in. This makes jWebSocket cross-browser-compatible.
+ * This plug-in processes the policy-file-request from the browser side flash plug-in. This makes
+ * jWebSocket cross-browser-compatible.
  *
  * @author Alexander Schulze
  */
@@ -58,7 +58,6 @@ public class FlashBridgePlugIn extends TokenPlugIn {
 	private ServerSocket mServerSocket = null;
 	private int mListenerPort = 843;
 	private boolean mIsRunning = false;
-	private int mEngineInstanceCount = 0;
 	private BridgeProcess mBridgeProcess = null;
 	private Thread mBridgeThread = null;
 	private final static String PATH_TO_CROSSDOMAIN_XML = "crossdomain_xml";
@@ -142,7 +141,7 @@ public class FlashBridgePlugIn extends TokenPlugIn {
 	public static String getCrossDomainXML() {
 		return mCrossDomainXML;
 	}
-	
+
 	@Override
 	public String getVersion() {
 		return VERSION;
@@ -183,8 +182,7 @@ public class FlashBridgePlugIn extends TokenPlugIn {
 		private final FlashBridgePlugIn mPlugIn;
 
 		/**
-		 * creates the server socket bridgeProcess for new incoming socket
-		 * connections.
+		 * creates the server socket bridgeProcess for new incoming socket connections.
 		 *
 		 * @param aPlugIn
 		 */
@@ -265,56 +263,41 @@ public class FlashBridgePlugIn extends TokenPlugIn {
 	}
 
 	@Override
-	public void engineStarted(WebSocketEngine aEngine) {
-		if (mLog.isDebugEnabled()) {
-			mLog.debug("Engine '" + aEngine.getId() + "' started.");
+	public void systemStopping() throws Exception {
+		if (!mIsRunning) {
+			return;
 		}
-		// every time an engine starts increment counter
-		mEngineInstanceCount++;
-	}
 
-	@Override
-	public void engineStopped(WebSocketEngine aEngine) {
-		if (mLog.isDebugEnabled()) {
-			mLog.debug("Engine '" + aEngine.getId() + "' stopped.");
-		}
-		// every time an engine starts decrement counter
-		mEngineInstanceCount--;
-		// when last engine stopped also stop the FlashBridge
-		if (mEngineInstanceCount <= 0) {
-			super.engineStopped(aEngine);
+		mIsRunning = false;
+		long lStarted = new Date().getTime();
 
-			mIsRunning = false;
-			long lStarted = new Date().getTime();
-
-			try {
-				// when done, close server socket
-				// closing the server socket should lead to an exception
-				// at accept in the bridgeProcess thread which terminates the
-				// bridgeProcess
-				if (mLog.isDebugEnabled()) {
-					mLog.debug("Closing FlashBridge server socket...");
-				}
-				mServerSocket.close();
-				if (mLog.isDebugEnabled()) {
-					mLog.debug("Closed FlashBridge server socket.");
-				}
-			} catch (IOException ex) {
-				mLog.error("(accept) " + ex.getClass().getSimpleName() + ": " + ex.getMessage());
-			}
-
-			try {
-				mBridgeThread.join(10000);
-			} catch (InterruptedException ex) {
-				mLog.error(ex.getClass().getSimpleName() + ": " + ex.getMessage());
-			}
+		try {
+			// when done, close server socket
+			// closing the server socket should lead to an exception
+			// at accept in the bridgeProcess thread which terminates the
+			// bridgeProcess
 			if (mLog.isDebugEnabled()) {
-				long lDuration = new Date().getTime() - lStarted;
-				if (mBridgeThread.isAlive()) {
-					mLog.warn("FlashBridge did not stopped after " + lDuration + "ms.");
-				} else {
-					mLog.debug("FlashBridge stopped after " + lDuration + "ms.");
-				}
+				mLog.debug("Closing FlashBridge server socket...");
+			}
+			mServerSocket.close();
+			if (mLog.isDebugEnabled()) {
+				mLog.debug("Closed FlashBridge server socket.");
+			}
+		} catch (IOException ex) {
+			mLog.error("(accept) " + ex.getClass().getSimpleName() + ": " + ex.getMessage());
+		}
+
+		try {
+			mBridgeThread.join(10000);
+		} catch (InterruptedException ex) {
+			mLog.error(ex.getClass().getSimpleName() + ": " + ex.getMessage());
+		}
+		if (mLog.isDebugEnabled()) {
+			long lDuration = new Date().getTime() - lStarted;
+			if (mBridgeThread.isAlive()) {
+				mLog.warn("FlashBridge did not stopped after " + lDuration + "ms.");
+			} else {
+				mLog.debug("FlashBridge stopped after " + lDuration + "ms.");
 			}
 		}
 	}
