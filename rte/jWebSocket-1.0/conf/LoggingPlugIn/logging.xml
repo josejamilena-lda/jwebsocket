@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" " http://www.springframework.org/dtd/spring-beans.dtd"> 
 <beans>
+
 	<!-- this is the simple log4j logger which logs to all targets configured in the log4j.xml -->
 	<bean id="targetLog4J" class="org.jwebsocket.plugins.logging.ClientLogger">
 	</bean>
