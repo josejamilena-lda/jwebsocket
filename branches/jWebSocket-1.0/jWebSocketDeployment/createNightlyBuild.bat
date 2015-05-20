@@ -4,17 +4,20 @@ echo jWebSocket Nightly Build Generator
 echo (C) Copyright 2013-2014 Innotrade GmbH
 echo -------------------------------------------------------------------------
 
-set JAVA_HOME=C:\Program Files\Java\jdk1.7.0_51
-rem set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_20
+IF NOT EXIST %JAVA_HOME% GOTO NO_JAVA_HOME
+GOTO PRINT_JAVA_VERSION
 
-set path=%JAVA_HOME%\bin;%PATH%
-rem set path=C:\Program Files\Java\jdk1.8.0_20\bin;%PATH%
+:NO_JAVA_HOME
+	set JAVA_HOME=C:\Program Files\Java\jdk1.7.0_51
+	rem set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_20
 
+	set path=%JAVA_HOME%\bin;%PATH%
+	rem set path=C:\Program Files\Java\jdk1.8.0_20\bin;%PATH%
+
+:PRINT_JAVA_VERSION
 echo Java Version:
 java -version
 echo -------------------------------------------------------------------------
-
-
 
 if "%JWEBSOCKET_HOME%"=="" goto error
 if "%JWEBSOCKET_VER%"=="" goto error
